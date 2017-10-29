@@ -53,6 +53,28 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+                                        <a href="/home}">
+                                           Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/profile/{{ \Illuminate\Support\Facades\Auth::user()->username }}">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <hr>
+                                    <li>
+                                        <a href="/post/create">
+                                            Create Post
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/posts">
+                                            Feed
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
