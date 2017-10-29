@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span>Alfredo Sebastiao</span>
-                    <span class="pull-right">{{ $post->created_at }}</span>
+                    <span class="pull-right">{{ $post->created_at->diffForHumans() }}</span>
                 </div>
                 <div class="panel-body">
                     <p>{{ $post->content }}</p>
