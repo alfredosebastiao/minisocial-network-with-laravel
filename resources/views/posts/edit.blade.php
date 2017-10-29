@@ -8,6 +8,7 @@
             </div>
             <div class="panel-body">
                 <form method="POST" action="/posts">
+                    {{ method_field('PUT') }}
                     {{ csrf_field() }}
 
                     <input type="hidden" name="user_id" value="{{ \Illuminate\Support\Facades\Auth::user()->id  }}">
