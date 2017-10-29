@@ -9,7 +9,8 @@
                     <span class="pull-right">{{ $post->created_at->diffForHumans() }}</span>
                 </div>
                 <div class="panel-body">
-                    <p>{{ $post->shortContent }}</p>
+                    {{ $post->shortContent }}
+                    <a href="/posts/{{ $post->id }}">Read more</a>
                 </div>
                 <div class="panel-footer clearfix" style="background-color: white">
                     <i class="fa fa-heart pull-right"></i>

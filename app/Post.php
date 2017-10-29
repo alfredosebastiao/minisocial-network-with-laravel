@@ -12,6 +12,6 @@ class Post extends Model
 
 
     public function getShortContentAttribute(){
-        return substr($this->content,0,random_int(60,150));
+        return substr($this->content,0,random_int(60,150)).'...';
     }
 }
