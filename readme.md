@@ -1,3 +1,10 @@
+<p>
+  Repositorio usado para desenvolvimento de uma minirede social usando o framework php Laravel na versao 5.3 .
+  Fiz esse projecto baseando-me em aulas do youtube devlob https://www.youtube.com/watch?v=a8ZpAf_tNh0&list=PL3ZhWMazGi9IYymniZgqwnYuPFDvaEHJb 
+ 
+</p>
+<p>O Projecto foi criado para questoes de trainning e melhoramento de skills com o framework </p>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
