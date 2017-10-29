@@ -7,6 +7,7 @@
             </div>
             <div class="panel-body">
                 <form method="POST" action="/posts">
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for="content">Content</label>
                         <textarea id="content" name="content" class="form-control"> </textarea>
