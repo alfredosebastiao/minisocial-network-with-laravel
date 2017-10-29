@@ -9,4 +9,9 @@ class Post extends Model
     protected $fillable = [
         'user_id','content'
     ];
+
+
+    public function getShortContentAttribute(){
+        return substr($this->content,0,random_int(60,150));
+    }
 }
