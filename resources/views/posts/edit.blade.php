@@ -4,17 +4,17 @@
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Create post
+                Edit post
             </div>
             <div class="panel-body">
-                <form method="POST" action="/posts">
+                <form method="POST" action="/posts/{{ $post->id }}">
                     {{ method_field('PUT') }}
                     {{ csrf_field() }}
 
                     <input type="hidden" name="user_id" value="{{ \Illuminate\Support\Facades\Auth::user()->id  }}">
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <textarea id="content" name="content" class="form-control"> </textarea>
+                        <textarea id="content" name="content" class="form-control"> {{ $post->content }}</textarea>
                     </div>
 
 
