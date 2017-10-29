@@ -23,6 +23,7 @@ class PostsController extends Controller
      */
     public function create()
     {
+       // return 'aaa';
         return view('posts.create');
     }
 

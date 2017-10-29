@@ -2,8 +2,8 @@
 @section('content')
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default">
-            <div class="panel-heading text-center">
-                <h1>Create post</h1>
+            <div class="panel-heading">
+                Create post
             </div>
             <div class="panel-body text-center">
 
