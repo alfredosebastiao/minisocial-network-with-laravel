@@ -6,7 +6,7 @@
                 Create post
             </div>
             <div class="panel-body">
-                <form>
+                <form method="POST" action="/posts">
                     <div class="form-group">
                         <label for="content">Content</label>
                         <textarea id="content" name="content" class="form-control"> </textarea>
