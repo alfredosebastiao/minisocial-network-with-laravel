@@ -36,7 +36,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-       // Post::created($request->all());
+        Post::create($request->all());
         return 'gravado';
     }
 
