@@ -64,7 +64,7 @@
                                     </li>
                                     <hr>
                                     <li>
-                                        <a href="/post/create">
+                                        <a href="/posts/create">
                                             Create Post
                                         </a>
                                     </li>
