@@ -33,6 +33,6 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'user_id' => App\User::all()->random()->id,
         'content' => $faker->paragraph(6),
         'live' => $faker->boolean(60),
-        
+
     ];
 });
