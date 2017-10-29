@@ -53,7 +53,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="/home}">
+                                        <a href="/home">
                                            Home
                                         </a>
                                     </li>
