@@ -5,8 +5,16 @@
             <div class="panel-heading">
                 Create post
             </div>
-            <div class="panel-body text-center">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea id="content" name="content" class="form-control"> </textarea>
+                    </div>
 
+
+                    <input type="submit" class="btn btn-success pull-right" >
+                </form>
             </div>
         </div>
     </div>
