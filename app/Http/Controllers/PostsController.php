@@ -14,7 +14,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $todosPosts = Post::all();
+        $todosPosts = Post::paginate(10);
       //  return $todosPosts;
         return view('posts.index',compact('todosPosts'));
     }
