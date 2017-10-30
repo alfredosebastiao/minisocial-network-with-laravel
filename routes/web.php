@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile/{username}','ProfileController@profile');
 
 Route::resource('posts','PostsController');
+Route::resource('chats','MessageController');
