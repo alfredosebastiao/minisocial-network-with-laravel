@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -50,8 +51,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id)->first();
-        return view('posts.show', compact('post'));
+        $post = Post::find($id)->with('user')->first();
+        //return $post;
+         return view('posts.show', compact('post'));
     }
 
     /**

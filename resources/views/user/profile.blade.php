@@ -15,7 +15,7 @@
                 <h1>{{ $user->username }}</h1>
                 <h5>{{ $user->email }}</h5>
                 <h5>{{ $user->dob->format('l j F Y') }} ( {{ $user->dob->age }} years old)</h5>
-                <button class="btn btn-success">Follow</button>
+                <button class="btn btn-success">Edit</button>
             </div>
         </div>
     </div>

@@ -59,6 +59,13 @@
                                            Home
                                         </a>
                                     </li>
+
+                                    <li>
+                                        <a href="/message">
+                                            Message
+                                        </a>
+                                    </li>
+
                                     <li>
                                         <a href="/profile/{{ \Illuminate\Support\Facades\Auth::user()->username }}">
                                             My Profile

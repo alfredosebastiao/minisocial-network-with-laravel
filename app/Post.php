@@ -14,4 +14,8 @@ class Post extends Model
     public function getShortContentAttribute(){
         return substr($this->content,0,random_int(60,150)).'...';
     }
+
+    public function user(){
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }
