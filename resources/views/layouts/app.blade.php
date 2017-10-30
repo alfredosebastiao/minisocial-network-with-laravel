@@ -61,7 +61,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="/chat">
+                                        <a href="/chats/{{ \Illuminate\Support\Facades\Auth::user()->id }}">
                                             Chats
                                         </a>
                                     </li>
