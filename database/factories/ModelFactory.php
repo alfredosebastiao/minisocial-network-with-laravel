@@ -36,3 +36,16 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
 
     ];
 });
+
+
+$factory->define(App\Message::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+
+        'mensagem' => $faker->paragraph(10),
+        'emissor_id' => App\User::all()->random()->id,
+        'receptor_id' => App\User::all()->random()->id,
+
+    ];
+});
