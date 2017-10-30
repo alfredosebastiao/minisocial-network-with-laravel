@@ -61,8 +61,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="/message">
-                                            Message
+                                        <a href="/chat">
+                                            Chats
                                         </a>
                                     </li>
 
