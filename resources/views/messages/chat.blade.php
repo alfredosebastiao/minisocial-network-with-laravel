@@ -14,7 +14,7 @@
                 <div class="panel-footer clearfix" style="background-color: white">
                     <span class="pull-left">
                         <i class="fa fa-clock-o"></i>
-                        {{ $mensagem->created_at->diffForHumans() }}
+                        {{ $mensagem->created_at}}
                     </span>
 
                 </div>
@@ -23,7 +23,7 @@
     @empty
 
         <div class="col-md-6 col-md-offset-3">
-            <p>Nemhuma Messangem por Ler</p>
+            <p>Nenhuma Mensagem</p>
         </div>
 
     @endforelse
