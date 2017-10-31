@@ -116,13 +116,13 @@ class MessageController extends Controller
 
     public function mostrarConversa($receptor,$emissor)
     {
-        $statments = 'SELECT messages.id,messages.mensagem,users.name,messages.created_at,receptor_id,emissor_id
+        $statment = 'SELECT messages.id,messages.mensagem,users.name,messages.created_at,receptor_id,emissor_id
                       FROM messages 
                       INNER JOIN users ON messages.emissor_id=users.id
                       WHERE (emissor_id=? AND receptor_id = ?) 
                       OR (emissor_id=? AND receptor_id = ?)
-                      Order BY messages.id';
-        $mensagens = DB::select($statments, [$receptor,$emissor,$emissor,$receptor]);
+                      Order BY messages.id DESC ';
+        $mensagens = DB::select($statment, [$receptor,$emissor,$emissor,$receptor]);
 //            $mensagens = Message::select('messages.id','mensagem','messages.created_at','users.username','users.name')
 //                ->orWhere('emissor_id','=',$emissor)
 //                ->orwhere('receptor_id','=',$emissor)
