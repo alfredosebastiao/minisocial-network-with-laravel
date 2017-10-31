@@ -1,30 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-    @forelse($todosPosts as $post)
+    @forelse($mensagens as $mensagem)
 
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <span>Alfredo Sebastiao</span>
-
+                    <span>{{ $mensagem->name }}</span>
                 </div>
                 <div class="panel-body">
-                    {{ $post->shortContent }}
-                    <a href="/posts/{{ $post->id }}">Read more</a>
+                    {{ $mensagem->shortContent }}
                 </div>
                 <div class="panel-footer clearfix" style="background-color: white">
-                    <span class="pull-right">{{ $post->created_at->diffForHumans() }}</span>
-                    <i class="fa fa-heart pull-right"></i>
+                    <span class="pull-left">
+                        <i class="fa fa-clock-o"></i>
+                        {{ $mensagem->created_at->diffForHumans() }}
+                    </span>
+
+                    <span class="pull-right">
+                        <a class=" btn btn-success">Ler mais...</a>
+                    </span>
                 </div>
             </div>
         </div>
     @empty
-        <p>No Posts</p>
+        <p>Nemhuma Messangem por Ler</p>
     @endforelse
     {{--<div class="row">--}}
     <div class="col-md-6 col-md-offset-3">
-        {{ $todosPosts->links() }}
+        {{--{{ $mensagens->links() }}--}}
     </div>
     {{--</div>--}}
 @endsection

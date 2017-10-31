@@ -66,6 +66,7 @@ class MessageController extends Controller
                 ->where('receptor_id','=',$id)
                 ->join('users','users.id','=','emissor_id')
                 ->orderBy('id','desc')
+                ->paginate(10)
                 ->first();
             if($message){
                 $mensagens->push($message);
@@ -75,7 +76,7 @@ class MessageController extends Controller
         }
 //
 
-       return $mensagens;
+       return view('messages.index',compact('mensagens'));
     }
 
     /**
