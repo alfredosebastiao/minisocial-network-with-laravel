@@ -63,6 +63,8 @@
                                     <li>
                                         <a href="/chats/{{ \Illuminate\Support\Facades\Auth::user()->id }}">
                                             Chats
+                                            <span class="badge badge-default">New</span>
+
                                         </a>
                                     </li>
 
