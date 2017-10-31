@@ -112,4 +112,17 @@ class MessageController extends Controller
     {
         //
     }
+
+    public function mostrarConversa($receptor,$emissor)
+    {
+
+            $mensagens = Message::select('messages.id','mensagem','messages.created_at','users.username','users.name')
+                ->where('emissor_id','=',$emissor)
+                ->where('receptor_id','=',$receptor)
+                ->join('users','users.id','=','emissor_id')
+                ->orderBy('id','desc')
+                ->get();
+
+        return view('messages.chat',compact('mensagens'));
+    }
 }

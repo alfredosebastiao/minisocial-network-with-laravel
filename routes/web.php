@@ -23,3 +23,4 @@ Route::get('/profile/{username}','ProfileController@profile');
 
 Route::resource('posts','PostsController');
 Route::resource('chats','MessageController');
+Route::get('chats/{receptor_id}/{emissor_id}', 'MessageController@mostrarConversa');

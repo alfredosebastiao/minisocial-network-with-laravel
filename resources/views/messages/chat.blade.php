@@ -9,7 +9,7 @@
                     <span>{{ $mensagem->name }}</span>
                 </div>
                 <div class="panel-body">
-                    {{ $mensagem->shortContent }}
+                    {{ $mensagem->mensagem }}
                 </div>
                 <div class="panel-footer clearfix" style="background-color: white">
                     <span class="pull-left">
@@ -17,21 +17,19 @@
                         {{ $mensagem->created_at->diffForHumans() }}
                     </span>
 
-                    <span class="pull-right">
-                        <a class=" btn btn-success"
-                           href="/chat/{{ \Illuminate\Foundation\Auth\User::user()->id }}/{{ $mensagem->emissor_id }}">
-                            Ler mais...
-                        </a>
-                    </span>
                 </div>
             </div>
         </div>
     @empty
-        <p>Nemhuma Messangem por Ler</p>
+
+        <div class="col-md-6 col-md-offset-3">
+            <p>Nemhuma Messangem por Ler</p>
+        </div>
+
     @endforelse
     {{--<div class="row">--}}
-    <div class="col-md-6 col-md-offset-3">
-        {{--{{ $mensagens->links() }}--}}
-    </div>
+    {{--<div class="col-md-6 col-md-offset-3">--}}
+        @include('messages.form_criar_mensagem');
+    {{--</div>--}}
     {{--</div>--}}
 @endsection
