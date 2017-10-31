@@ -132,6 +132,6 @@ class MessageController extends Controller
 //                ->orderBy('id','desc')
 //                ->get();
        // return $mensagens
-        return view('messages.chat',compact('mensagens'));
+        return view('messages.chat',compact('mensagens','emissor'));
     }
 }

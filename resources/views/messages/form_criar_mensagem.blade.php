@@ -7,7 +7,7 @@
                     {{ csrf_field() }}
                     {{--{{ $mensagens[0]->mensagem }}--}}
                     <input type="hidden" name="emissor_id" value="{{ \Illuminate\Support\Facades\Auth::user()->id  }}">
-                    <input type="hidden" name="receptor_id" value="{{ $mensagens[0]->emissor_id  }}">
+                    <input type="hidden" name="receptor_id" value="{{ $emissor  }}">
 
                     <div class="form-group">
                         <label for="mensagem">Mensagem</label>
