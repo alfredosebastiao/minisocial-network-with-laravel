@@ -36,7 +36,8 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Message::create($request->all());
+        return  redirect('/chats/'.$request->receptor_id.'/'.$request->emissor_id);
     }
 
     /**
@@ -61,7 +62,7 @@ class MessageController extends Controller
         $mensagens = collect();
         foreach ($users as $user){
 
-            $message = Message::select('messages.id','mensagem','messages.created_at','users.username','users.name')
+            $message = Message::select('messages.id','mensagem','messages.created_at','users.username','users.name','emissor_id')
                 ->where('emissor_id','=',$user->id)
                 ->where('receptor_id','=',$id)
                 ->join('users','users.id','=','emissor_id')

@@ -19,7 +19,7 @@
 
                     <span class="pull-right">
                         <a class=" btn btn-success"
-                           href="/chat/{{ \Illuminate\Foundation\Auth\User::user()->id }}/{{ $mensagem->emissor_id }}">
+                           href="/chats/{{ \Illuminate\Support\Facades\Auth::user()->id }}/{{ $mensagem->emissor_id }}">
                             Ler mais...
                         </a>
                     </span>

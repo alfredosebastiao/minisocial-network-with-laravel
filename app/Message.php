@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Message extends Model
 {
+    protected $fillable = [
+        'mensagem','emissor_id','receptor_id',
+    ];
     public function getShortContentAttribute(){
         return substr($this->mensagem,0,random_int(60,100)).'...';
     }
