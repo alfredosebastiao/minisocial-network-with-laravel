@@ -115,7 +115,7 @@ class MessageController extends Controller
 
     public function mostrarConversa($receptor,$emissor)
     {
-        $statments = 'SELECT messages.id,messages.mensagem,users.name,messages.created_at,receptor_id
+        $statments = 'SELECT messages.id,messages.mensagem,users.name,messages.created_at,receptor_id,emissor_id
                       FROM messages 
                       INNER JOIN users ON messages.emissor_id=users.id
                       WHERE (emissor_id=? AND receptor_id = ?) 
