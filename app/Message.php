@@ -13,4 +13,6 @@ class Message extends Model
     public function receptor(){
         return $this->belongsTo('App\User', 'receptor_id');
     }
+
+
 }
