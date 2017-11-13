@@ -18,4 +18,10 @@ class ProfileController extends Controller
 
         return view('user.edit', compact('user'));
     }
+
+
+
+
+
+
 }
