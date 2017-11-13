@@ -15,7 +15,7 @@
                 <h1>{{ $user->username }}</h1>
                 <h5>{{ $user->email }}</h5>
                 <h5>{{ $user->dob->format('l j F Y') }} ( {{ $user->dob->age }} years old)</h5>
-                <a href="profile/{{ $user->username }}/edit" class="btn btn-success">Edit</a>
+                <a href="{{ $user->username }}/edit" class="btn btn-success">Edit</a>
             </div>
         </div>
     </div>
