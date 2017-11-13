@@ -12,4 +12,10 @@ class ProfileController extends Controller
 
         return view('user.profile', compact('user'));
     }
+
+    public function edit($username){
+        $user = User::whereUsername($username)->first();
+
+        return view('user.edit', compact('user'));
+    }
 }

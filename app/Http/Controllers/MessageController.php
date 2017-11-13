@@ -59,7 +59,7 @@ class MessageController extends Controller
 //                ->orderBy('messages.id','desc')
 //                ->first();
 
-        $ms = collect();
+        $mensagens = collect();
         foreach ($users as $user){
 
             $message = Message::select('messages.id','mensagem','messages.created_at','users.username','users.name','emissor_id')
@@ -70,18 +70,17 @@ class MessageController extends Controller
                 ->paginate(10)
                 ->first();
             if($message){
-                $ms->push($message);
+                $mensagens->push($message);
             }
             $message = null;
            // echo $message;
         }
-        $mensagens = collect();
+        //$mensagens = collect();
 
 
 
 
         //$mensagens = array_reverse($ms,true);
-//
 
        return view('messages.index',compact('mensagens'));
     }
